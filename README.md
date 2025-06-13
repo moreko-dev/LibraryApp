@@ -29,10 +29,6 @@ librarymanager/
 ├── pom.xml
 ├── README.md
 
-yaml
-Copy
-Edit
-
 ---
 
 ## ⚙️ Getting Started
@@ -40,6 +36,7 @@ Edit
 1️⃣ Clone the repository:
 ```bash
 git clone https://github.com/moreko-dev/LibraryApp.git
+```
 2️⃣ Open it in your preferred Java IDE (like IntelliJ IDEA or NetBeans)
 
 3️⃣ Build and Run the project.
@@ -69,10 +66,6 @@ You can insert a screenshot or a demo GIF here to showcase the app interface.
 
 Built with 💙 by a passionate Java developer.
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🚀 Next Step
@@ -83,3 +76,4 @@ Edit
 git add README.md
 git commit -m "Add English README"
 git push
+```
