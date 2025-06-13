@@ -1,0 +1,60 @@
+package dev.moreko.librarymanager.view;
+
+import java.awt.Color;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import dev.moreko.librarymanager.theme.Colors;
+import dev.moreko.librarymanager.theme.Icons;
+import net.miginfocom.swing.MigLayout;
+
+public class BorrowFormView extends JPanel {
+    private String callType = "Add";
+    private JButton backButton = new JButton("", Icons.BACK_BUTTON);
+    private JTextField IDField = new JTextField();
+    private JTextField bookIDField = new JTextField();
+    private JTextField memberIDField = new JTextField();
+    private JButton submitButton = new JButton("Add", Icons.ADD_BUTTON);
+    
+    public BorrowFormView() {
+        this.setOpaque(false);
+        this.setBackground(new Color(0, 0, 0, 0));
+        this.setLayout(new MigLayout("inset 10", "[grow]", ""));
+
+        backButton.setBackground(Colors.EDIT_BUTTON_COLOR);
+
+        this.add(backButton, "wrap");
+        this.add(new JLabel("Borrow ID:"), "grow, wrap");
+        this.add(IDField, "grow, wrap");
+        this.add(new JLabel("Book ID:"), "grow, wrap");
+        this.add(bookIDField, "grow, wrap");
+        this.add(new JLabel("Member ID:"), "grow, wrap");
+        this.add(memberIDField, "grow, wrap");
+        this.add(submitButton, "grow");
+    }
+
+    public JButton getBackButton() { return this.backButton; }
+    public JTextField getIDField() { return this.IDField; }
+    public JTextField getBookIDField() { return this.bookIDField; }
+    public JTextField getMemberIDField() { return this.memberIDField; }
+    public JButton getSubmitButton() { return this.submitButton; }
+    public void setCallType(String type) {
+        if (type.equals("Add")) {
+            this.callType = "Add";
+            this.submitButton.setText("Add");
+            this.submitButton.setIcon(Icons.ADD_BUTTON);
+            this.submitButton.setBackground(Colors.ADD_BUTTON_COLOR);
+        } else {
+            this.callType = "Edit";
+            this.submitButton.setText("Edit");
+            this.submitButton.setIcon(Icons.EDIT_BUTTON);
+            this.submitButton.setBackground(Colors.EDIT_BUTTON_COLOR);
+        }
+    }
+    public String getCallType() {
+        return this.callType;
+    }
+}
