@@ -65,15 +65,3 @@ Feel free to open an Issue or a Pull Request.
 You can insert a screenshot or a demo GIF here to showcase the app interface.
 
 Built with 💙 by a passionate Java developer.
-
----
-
-## 🚀 Next Step
-
-1. Copy this into a `README.md` file in the root of your project.  
-2. Then do:
-```bash
-git add README.md
-git commit -m "Add English README"
-git push
-```
